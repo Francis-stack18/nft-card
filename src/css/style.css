@@ -1,0 +1,135 @@
+body {
+  background-color: var(--neutral-dark);
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.nft-card {
+  max-width: 346px;
+  background-color: var(--neutral-medium);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.image-link{
+    position: relative;
+    display: flex;
+}
+
+.image-link .image-nft{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.image-link::before{
+    content: "";
+    background-color: var(--primary-medium);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.image-link::after{
+    content: "";
+    background: url(../images/icon-view.svg) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    display: none;
+}
+
+.image-link:hover::before{
+    display: block;
+    opacity: 0.4;
+}
+
+.image-link:hover::after{
+    display: block;
+    opacity: 1;
+} 
+
+.title-link .title {
+  font-size: 22px;
+  color: white;
+  margin: 25px 0 20px;
+}
+
+.title-link .title:hover{
+    color: var(--primary-medium);
+}
+
+.sobre {
+  color: var(--primary-soft);
+  font-weight: 300;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.informações-nft {
+  display: flex;
+  justify-content: space-between;
+}
+
+.informações-nft .price {
+  color: var(--primary-medium);
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.informações-nft .price::before {
+  content: "";
+  background: url(../images/icon-ethereum.svg) no-repeat center;
+  width: 11px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.informações-nft .days-left {
+  color: var(--primary-soft);
+  display: flex;
+}
+
+.informações-nft .days-left::before {
+    content: "";
+    background: url(../images/icon-clock.svg) no-repeat center;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin: 3px 5px 0 0;
+  }
+
+.informacoes-do-criador {
+  display: flex;
+  border-top: 1px solid var(--neutral-soft);
+  padding-top: 20px;
+}
+
+.informacoes-do-criador .avatar {
+  max-width: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.informacoes-do-criador .text {
+  color: var(--primary-soft);
+}
+
+.informacoes-do-criador .name {
+  color: white;
+}
+
+.informacoes-do-criador .name:hover{
+    color: var(--primary-medium);
+}
